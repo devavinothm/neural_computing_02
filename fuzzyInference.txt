@@ -1,0 +1,78 @@
+Procedure
+    1. Go to command window in Matlab and type fuzzy.
+    2. Now, new Fuzzy Logic Designer window will be opened.
+    3. Input / Output Variable 
+        a. Go to Edit Window and click Add variable.
+        b. As per our requirements create two input variables, Temperature and Cloud Cover.
+        c. Create one output variable, Speed.
+    4. Temperature:
+        a. Double click the Temperature input variable in Fuzzy Logic Designer window.
+        b. New window will be opened and remove all the Membership Functions.
+        c. Now, Go to Edit and Click Add MFs and select the 4 Parameters for Temperature Class. 
+        d. Change the following fields as mentioned data in the given below table.
+Inputs : Temperature  Freezing, Cool, Warm and Hot
+MF1:
+Range : [0 110]
+Name	: Freezing
+Type :trapmf
+Parameter [0 0 30 50]
+MF2:
+Range : [0 110]
+Name	: Cool
+Type :trimf
+Parameter [30 50 70]
+
+MF3:
+Range : [0 110]
+Name	: Warm
+Type :trimf
+Parameter [50 70 90]
+
+MF4:
+Range : [0 110]
+Name	: Hot
+Type :trapmf
+Parameter [70 90 110 110]
+
+
+    5. Similarly, add the datas to the Cloud Cover variables and Speed variables.
+    6. Cloud Cover:
+Inputs : Cloud Cover  Sunny, Partly Cloud and Overcast
+MF1:
+Range : [0 100]
+Name	: Sunny
+Type :trapmf
+Parameter [0 0 20 40]
+MF2:
+Range : [0 100]
+Name	: Partly Cloud
+Type :trimf
+Parameter [20 50 80]
+
+MF3:
+Range : [0 100]
+Name	: Overcast
+Type :trapmf
+Parameter [60 80 100]
+
+
+    7. Speed:
+Output : Speed  Slow and Fast
+MF1:
+Range : [0 100]
+Name	: Slow
+Type :trapmf
+Parameter [0 0 25 75]
+MF2:
+Range : [0 100]
+Name	: Fast
+Type :trapmf
+Parameter [25 75 100 100]
+
+
+    8. Goto Rules: Edit  Rules
+    9. Add the Rules
+Rule-1 : Sunny (Cover) and Warm (Temp) -> Fast (Speed)
+Rule-2 :  Cloudy (Cover) and Cool (Temp) -> Slow (Speed)
+10.  Go to view  Rules
+11. Exit.
